@@ -1,0 +1,374 @@
+{
+  "meta": {
+    "python": "3.13.7",
+    "platform": "macOS-15.6.1-arm64-arm-64bit-Mach-O",
+    "timestamp": 1763578810.171728,
+    "benchmarks": [
+      "task_spawn",
+      "io_bound",
+      "cancellation"
+    ],
+    "libraries": [
+      "asyncio",
+      "trio",
+      "anyio"
+    ],
+    "repetitions": 2
+  },
+  "results": [
+    {
+      "library": "asyncio",
+      "scenario": "task_spawn",
+      "params": {
+        "task_count": 20000,
+        "payload_sleep": 0.0005
+      },
+      "metrics": {
+        "tasks": 20000,
+        "payload_sleep_s": 0.0005,
+        "duration_s": 0.09640066600695718,
+        "tasks_per_sec": 207467.44631988966,
+        "latency_p50_ms": 51.5397494964418,
+        "latency_p95_ms": 57.15993058911408
+      },
+      "rep": 1,
+      "duration_s": 0.09923829199397005
+    },
+    {
+      "library": "asyncio",
+      "scenario": "task_spawn",
+      "params": {
+        "task_count": 20000,
+        "payload_sleep": 0.0005
+      },
+      "metrics": {
+        "tasks": 20000,
+        "payload_sleep_s": 0.0005,
+        "duration_s": 0.09227479199762456,
+        "tasks_per_sec": 216743.91853969026,
+        "latency_p50_ms": 39.57829200226115,
+        "latency_p95_ms": 53.16405865814886
+      },
+      "rep": 2,
+      "duration_s": 0.09504116699099541
+    },
+    {
+      "library": "asyncio",
+      "scenario": "io_bound",
+      "params": {
+        "concurrency": 200,
+        "ops_per_worker": 200,
+        "mean_delay_ms": 5.0,
+        "seed": 1337
+      },
+      "metrics": {
+        "workers": 200,
+        "ops_per_worker": 200,
+        "mean_delay_ms": 5.0,
+        "duration_s": 1.2345584580034483,
+        "ops": 40000,
+        "ops_per_sec": 32400.24783005316,
+        "latency_mean_ms": 5.012968634059871,
+        "latency_p95_ms": 15.003970798716162,
+        "latency_p99_ms": 22.949787906836722
+      },
+      "rep": 1,
+      "duration_s": 1.2577879169984953
+    },
+    {
+      "library": "asyncio",
+      "scenario": "io_bound",
+      "params": {
+        "concurrency": 200,
+        "ops_per_worker": 200,
+        "mean_delay_ms": 5.0,
+        "seed": 1337
+      },
+      "metrics": {
+        "workers": 200,
+        "ops_per_worker": 200,
+        "mean_delay_ms": 5.0,
+        "duration_s": 1.212463125004433,
+        "ops": 40000,
+        "ops_per_sec": 32990.69404676018,
+        "latency_mean_ms": 5.011336744194705,
+        "latency_p95_ms": 15.005172945529916,
+        "latency_p99_ms": 22.951919345650822
+      },
+      "rep": 2,
+      "duration_s": 1.2326994580071187
+    },
+    {
+      "library": "asyncio",
+      "scenario": "cancellation",
+      "params": {
+        "task_count": 5000,
+        "cancel_after_s": 0.05
+      },
+      "metrics": {
+        "cancelled": 5000,
+        "exceptions": 0,
+        "settle_s": 0.014248916006181389,
+        "tasks": 5000,
+        "cancel_after_s": 0.05,
+        "duration_s": 0.07013929200184066
+      },
+      "rep": 1,
+      "duration_s": 0.0718780839961255
+    },
+    {
+      "library": "asyncio",
+      "scenario": "cancellation",
+      "params": {
+        "task_count": 5000,
+        "cancel_after_s": 0.05
+      },
+      "metrics": {
+        "cancelled": 5000,
+        "exceptions": 0,
+        "settle_s": 0.011707041005138308,
+        "tasks": 5000,
+        "cancel_after_s": 0.05,
+        "duration_s": 0.0702041670010658
+      },
+      "rep": 2,
+      "duration_s": 0.07199008300085552
+    },
+    {
+      "library": "trio",
+      "scenario": "task_spawn",
+      "params": {
+        "task_count": 20000,
+        "payload_sleep": 0.0005
+      },
+      "metrics": {
+        "tasks": 20000,
+        "payload_sleep_s": 0.0005,
+        "duration_s": 0.32061424999847077,
+        "tasks_per_sec": 62380.25914348908,
+        "latency_p50_ms": 212.8128545009531,
+        "latency_p95_ms": 285.07564584579086
+      },
+      "rep": 1,
+      "duration_s": 0.3218540420057252
+    },
+    {
+      "library": "trio",
+      "scenario": "task_spawn",
+      "params": {
+        "task_count": 20000,
+        "payload_sleep": 0.0005
+      },
+      "metrics": {
+        "tasks": 20000,
+        "payload_sleep_s": 0.0005,
+        "duration_s": 0.2857651660015108,
+        "tasks_per_sec": 69987.53654913371,
+        "latency_p50_ms": 175.16683300345903,
+        "latency_p95_ms": 250.2407749976555
+      },
+      "rep": 2,
+      "duration_s": 0.2868728339963127
+    },
+    {
+      "library": "trio",
+      "scenario": "io_bound",
+      "params": {
+        "concurrency": 200,
+        "ops_per_worker": 200,
+        "mean_delay_ms": 5.0,
+        "seed": 1337
+      },
+      "metrics": {
+        "workers": 200,
+        "ops_per_worker": 200,
+        "mean_delay_ms": 5.0,
+        "duration_s": 1.2281714580021799,
+        "ops": 40000,
+        "ops_per_sec": 32568.742531329044,
+        "latency_mean_ms": 5.014995865573291,
+        "latency_p95_ms": 14.996895506919811,
+        "latency_p99_ms": 22.970131335023336
+      },
+      "rep": 1,
+      "duration_s": 1.2474142919963924
+    },
+    {
+      "library": "trio",
+      "scenario": "io_bound",
+      "params": {
+        "concurrency": 200,
+        "ops_per_worker": 200,
+        "mean_delay_ms": 5.0,
+        "seed": 1337
+      },
+      "metrics": {
+        "workers": 200,
+        "ops_per_worker": 200,
+        "mean_delay_ms": 5.0,
+        "duration_s": 1.1749341660033679,
+        "ops": 40000,
+        "ops_per_sec": 34044.4606663054,
+        "latency_mean_ms": 5.006759081053679,
+        "latency_p95_ms": 15.002564900350988,
+        "latency_p99_ms": 22.939109661965638
+      },
+      "rep": 2,
+      "duration_s": 1.19146820800961
+    },
+    {
+      "library": "trio",
+      "scenario": "cancellation",
+      "params": {
+        "task_count": 5000,
+        "cancel_after_s": 0.05
+      },
+      "metrics": {
+        "cancelled": 5000,
+        "exceptions": 0,
+        "settle_s": 0.04257920800591819,
+        "tasks": 5000,
+        "cancel_after_s": 0.05,
+        "duration_s": 0.10133608400064986
+      },
+      "rep": 1,
+      "duration_s": 0.10173129200120457
+    },
+    {
+      "library": "trio",
+      "scenario": "cancellation",
+      "params": {
+        "task_count": 5000,
+        "cancel_after_s": 0.05
+      },
+      "metrics": {
+        "cancelled": 5000,
+        "exceptions": 0,
+        "settle_s": 0.04041316598886624,
+        "tasks": 5000,
+        "cancel_after_s": 0.05,
+        "duration_s": 0.09834925000905059
+      },
+      "rep": 2,
+      "duration_s": 0.09865995899599511
+    },
+    {
+      "library": "anyio",
+      "scenario": "task_spawn",
+      "params": {
+        "task_count": 20000,
+        "payload_sleep": 0.0005
+      },
+      "metrics": {
+        "tasks": 20000,
+        "payload_sleep_s": 0.0005,
+        "duration_s": 0.13681387499673292,
+        "tasks_per_sec": 146184.00363616334,
+        "latency_p50_ms": 46.61974999908125,
+        "latency_p95_ms": 71.53131280720118
+      },
+      "rep": 1,
+      "duration_s": 0.13902208300714847
+    },
+    {
+      "library": "anyio",
+      "scenario": "task_spawn",
+      "params": {
+        "task_count": 20000,
+        "payload_sleep": 0.0005
+      },
+      "metrics": {
+        "tasks": 20000,
+        "payload_sleep_s": 0.0005,
+        "duration_s": 0.13807741699565668,
+        "tasks_per_sec": 144846.2785238017,
+        "latency_p50_ms": 46.53464549483033,
+        "latency_p95_ms": 73.22930445006932
+      },
+      "rep": 2,
+      "duration_s": 0.1390401670068968
+    },
+    {
+      "library": "anyio",
+      "scenario": "io_bound",
+      "params": {
+        "concurrency": 200,
+        "ops_per_worker": 200,
+        "mean_delay_ms": 5.0,
+        "seed": 1337
+      },
+      "metrics": {
+        "workers": 200,
+        "ops_per_worker": 200,
+        "mean_delay_ms": 5.0,
+        "duration_s": 1.228274249995593,
+        "ops": 40000,
+        "ops_per_sec": 32566.016913684805,
+        "latency_mean_ms": 5.013588730063202,
+        "latency_p95_ms": 15.002983044541882,
+        "latency_p99_ms": 22.948689839831808
+      },
+      "rep": 1,
+      "duration_s": 1.250328999987687
+    },
+    {
+      "library": "anyio",
+      "scenario": "io_bound",
+      "params": {
+        "concurrency": 200,
+        "ops_per_worker": 200,
+        "mean_delay_ms": 5.0,
+        "seed": 1337
+      },
+      "metrics": {
+        "workers": 200,
+        "ops_per_worker": 200,
+        "mean_delay_ms": 5.0,
+        "duration_s": 1.2170812919939635,
+        "ops": 40000,
+        "ops_per_sec": 32865.51215857354,
+        "latency_mean_ms": 5.012125266930525,
+        "latency_p95_ms": 15.003858955606107,
+        "latency_p99_ms": 22.94707334483975
+      },
+      "rep": 2,
+      "duration_s": 1.2375757499976316
+    },
+    {
+      "library": "anyio",
+      "scenario": "cancellation",
+      "params": {
+        "task_count": 5000,
+        "cancel_after_s": 0.05
+      },
+      "metrics": {
+        "cancelled": 5000,
+        "exceptions": 0,
+        "settle_s": 0.02920283300045412,
+        "tasks": 5000,
+        "cancel_after_s": 0.05,
+        "duration_s": 0.09023454200359993
+      },
+      "rep": 1,
+      "duration_s": 0.09092274999420624
+    },
+    {
+      "library": "anyio",
+      "scenario": "cancellation",
+      "params": {
+        "task_count": 5000,
+        "cancel_after_s": 0.05
+      },
+      "metrics": {
+        "cancelled": 5000,
+        "exceptions": 0,
+        "settle_s": 0.01706779199594166,
+        "tasks": 5000,
+        "cancel_after_s": 0.05,
+        "duration_s": 0.07970066700363532
+      },
+      "rep": 2,
+      "duration_s": 0.08055120799690485
+    }
+  ]
+}

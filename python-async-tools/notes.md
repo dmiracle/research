@@ -1,0 +1,11 @@
+- Created project directory `python-async-tools`.
+- uv environment present; installed dependencies: trio, anyio, pandas, matplotlib, seaborn.
+- Added placeholder README and gitignore for virtual env/cache artifacts.
+- Added backend adapters for asyncio/trio/anyio and benchmark scenarios (task spawn, simulated I/O, cancellation).
+- Implemented runner CLI and plotting utilities using pandas/seaborn/matplotlib.
+- Adjusted entrypoint to invoke runner.
+- Ran benchmarks via `uv run python -m python_async_tools.runner --repetitions 2`, capturing JSON results in results/latest.json.
+- Generated plots with `uv run python -m python_async_tools.plotting` -> PNGs under plots/.
+- Re-ran benchmarks after tweaking cancellation metrics; regenerated results and plots.
+- Observed outcomes: asyncio fastest at raw spawn/cancel; trio slower on spawn but similar per-op latency; anyio sits between asyncio and trio, cancellation faster than trio.
+- Drafted README with executive summary, design notes per library, benchmark descriptions, reproduction steps, and embedded plots.

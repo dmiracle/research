@@ -1,0 +1,23 @@
+[project]
+name = "python-async-tools"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Dylan Miracle", email = "dylan@strangeworks.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "anyio>=4.11.0",
+    "matplotlib>=3.10.7",
+    "pandas>=2.3.3",
+    "seaborn>=0.13.2",
+    "trio>=0.32.0",
+]
+
+[project.scripts]
+python-async-tools = "python_async_tools:main"
+
+[build-system]
+requires = ["uv_build>=0.8.19,<0.9.0"]
+build-backend = "uv_build"
