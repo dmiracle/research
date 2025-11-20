@@ -1,0 +1,4 @@
+namespace py calculator_thrift
+service Calculator {
+  i32 add(1:i32 a, 2:i32 b)
+}
