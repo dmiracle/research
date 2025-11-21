@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    user: appuser
+    volumes:
+      - ${TASK_DIRECTORY:-.}:/app
+      - ./.docker_config/.claude:/home/appuser/.claude
+      - ./.docker_config/.codex:/home/appuser/.codex
+      - ./.docker_config/.claude.json:/home/appuser/.claude.json
