@@ -115,7 +115,18 @@ for dirname, commit_date in subdirs_with_dates:
     print()  # Add blank line between entries
 
 ]]]-->
-## 2 research projects
+## 3 research projects
+
+### [python-rss-tools](https://github.com/dmiracle/research/tree/main/python-rss-tools) (2025-11-21)
+
+Surveying Python's RSS and Atom ecosystem reveals a variety of libraries covering parsing, aggregation, and feed generation, each catering to differing needs from simple synchronous parsing to full-featured, persistent aggregation and async operations. Tools like [feedparser](https://github.com/kurtmckee/feedparser) and [reader](https://github.com/lemon24/reader) respectively provide quick, tolerant parsing and persistent aggregation, while [feedgen](https://github.com/lkiesow/python-feedgen) and PyRSS2Gen streamline programmatic feed creation, varying in scope and convenience. Podcastparser targets podcast-specific metadata, and aiofeedparser supports async workflows for concurrent feed fetching. Usage examples demonstrate typical patterns, such as reading the top three items from a feed, highlighting simplicity and ease of integration.
+
+**Key findings:**  
+- feedparser is widely adopted for general feed parsing, excelling at handling malformed feeds.  
+- reader offers persistent storage and incremental updates for robust aggregation needs.  
+- feedgen and PyRSS2Gen are suited for feed generation, with feedgen supporting both Atom and RSS.  
+- aiofeedparser enables async feed parsing, useful for batch or real-time applications.  
+- podcastparser efficiently extracts detailed podcast metadata from RSS feeds.
 
 ### [python-rpc-alternatives](https://github.com/dmiracle/research/tree/main/python-rpc-alternatives) (2025-11-20)
 
