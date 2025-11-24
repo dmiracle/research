@@ -1,0 +1,15 @@
+[project]
+name = "python-3d-modeling-libs"
+version = "0.1.0"
+description = "Research and examples for Python 3D modeling libraries"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "open3d",
+    "trimesh",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
